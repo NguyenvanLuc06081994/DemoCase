@@ -7,8 +7,8 @@
             border: 1px solid black;
         }
     </style>
-    <a href="index.php?page=add-bill">ADD NEW BILL</a>
-    <table>
+    <a href="index.php?page=add-bill" class="btn btn-primary mt-3 mb-3">ADD NEW BILL</a>
+    <table class="table table-hover">
 
         <tr>
             <th>Bill_ID</th>

@@ -9,7 +9,8 @@
     }
 
 </style>
-<table>
+<h3>Customer Info</h3>
+<table class="table table-hover mt-3">
     <tr>
         <th>Name</th>
         <td><?php echo $billDetails[0]['name'] ?></td>
@@ -32,24 +33,16 @@
     </tr>
     <tr>
         <th>Status</th>
-          <td><?php echo $billDetails[0]['status'] ?></td>
+        <td><?php echo $billDetails[0]['status'] ?></td>
     </tr>
 
-    </tr>
-    <tr>
-
-
-
-
-
-
-
-    </tr>
 </table>
-<table>
+<h3>Bill Info</h3>
+<table class="table table-hover">
     <tr>
         <th>STT</th>
         <th>Product Name</th>
+        <th>Category</th>
         <th>Quantity</th>
         <th>Product Price</th>
     </tr>
@@ -65,6 +58,7 @@
             <tr>
                 <td><?php echo ++$key ?></td>
                 <td><?php echo $bills[1] ?></td>
+                <td><?php echo $bills[0] ?></td>
                 <td><?php echo $bills['quantity'] ?></td>
                 <td><?php echo $bills['price'] ?></td>
 
@@ -74,5 +68,5 @@
     <?php endif; ?>
 </table>
 <?php
-echo "<pre>";
-print_r($billDetails); ?>
+//echo "<pre>";
+//print_r($billDetails); ?>

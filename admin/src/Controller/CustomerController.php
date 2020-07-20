@@ -33,7 +33,7 @@ class CustomerController
             $address = $_POST['address'];
             $customer = new Customer($name, $phone, $email, $address);
             $this->customerController->addCustomer($customer);
-            header("location:index.php");
+            header("location:index.php?page=list-customer");
         }
     }
 
@@ -52,7 +52,7 @@ class CustomerController
             $customer = new Customer($name, $phone, $email, $address);
             $customer->setId($id);
             $this->customerController->updateCustomer($customer);
-            header("location:index.php");
+            header("location:index.php?page=list-customer");
         }
     }
 
@@ -61,7 +61,7 @@ class CustomerController
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
             $id = $_REQUEST['id'];
             $this->customerController->deleteCustomer($id);
-            header("location:index.php");
+            header("location:index.php?page=list-customer");
         }
     }
 

@@ -12,7 +12,7 @@ $bills = new BillController();
 $categories = new CategoryController();
 $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
 
-if (isset($_SESSION['username']) && $_SESSION['password']){
+if (isset($_SESSION['username'])  && $_SESSION['password']){
     include ('admin.php');
 }else{
     include ('src/View/login.php');

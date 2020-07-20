@@ -58,6 +58,12 @@
         case "login":
             include ('src/View/login.php');
             break;
+        case 'update-category':
+            $categories->updateCategory();
+            break;
+        case 'delete-category':
+            $categories->deleteCategory();
+            break;
         default:
             $products->getAllProduct();
     } ?>
