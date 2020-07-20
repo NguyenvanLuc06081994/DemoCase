@@ -1,17 +1,3 @@
-<?php
-
-use App\Controller\BillController;
-use App\Controller\CategoryController;
-use App\Controller\CustomerController;
-use App\Controller\ProductController;
-
-require __DIR__ . "/vendor/autoload.php";
-$products = new ProductController();
-$customers = new CustomerController();
-$bills = new BillController();
-$categories = new CategoryController();
-$page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -68,6 +54,9 @@ $page = isset($_REQUEST['page']) ? $_REQUEST['page'] : "";
             break;
         case 'bill-detail':
             $bills->getBillDetail();
+            break;
+        case "login":
+            include ('src/View/login.php');
             break;
         default:
             $products->getAllProduct();

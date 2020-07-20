@@ -3,11 +3,10 @@
 
 namespace App\Controller;
 
-use App\Model\Bill;
+
 use App\Model\BillManager;
 use App\Model\CustomerManager;
 use App\Model\DetailManager;
-use App\Model\ProductManager;
 
 class BillController
 {
@@ -51,7 +50,7 @@ class BillController
 //            $customer_id = $_POST['customer_id'];
 //            $bill = new Bill($date, $status, $totalPrice, $customer_id);
 //            $this->billController->addBill($bill);
-//            header('location:index.php');
+//            header('location:admin.php');
 //        }
 //    }
 //
@@ -62,7 +61,7 @@ class BillController
 //            $iddetail = $_REQUEST['iddetail'];
 //            $this->detailController->deleteDetail($iddetail);
 //            $this->billController->deleteBill($idbill);
-//            header("location:index.php");
+//            header("location:admin.php");
 //        }
 //    }
 
@@ -81,7 +80,7 @@ class BillController
 //            $bill = new Bill($date, $status, $totalPrice, $customer_id);
 //            $bill->setId($id);
 //            $this->billController->updateBill($bill);
-//            header('location:index.php');
+//            header('location:admin.php');
 //        }
 //    }
 //
