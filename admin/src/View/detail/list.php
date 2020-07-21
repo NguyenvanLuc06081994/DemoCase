@@ -21,7 +21,7 @@
                 <td><?php echo $detail->getBillId() ?></td>
                 <td><?php echo $detail->getProductId() ?></td>
                 <td><?php echo $detail->getQuantity() ?></td>
-                <td><a onclick="return confirm('Are You Sure?')" href="index.php?page=delete-deta   il&id=<?php echo $detail->getId() ?>">Delete</a></td>
+                <td><a onclick="return confirm('Are You Sure?')" href="index.php?page=delete-detail&id=<?php echo $detail->getId() ?>">Delete</a></td>
             </tr>
         <?php endforeach; ?>
     <?php endif; ?>

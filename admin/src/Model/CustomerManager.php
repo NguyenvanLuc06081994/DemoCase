@@ -68,4 +68,21 @@ class CustomerManager
         $stmt->execute();
     }
 
+    public function searchCustomer($keyword)
+    {
+        $sql = "SELECT * FROM `customers` WHERE name Like :keyword";
+        $stmt = $this->database->prepare($sql);
+        $stmt->bindValue(':keyword', '%' . $keyword . '%');
+        $stmt->execute();
+        $data = $stmt->fetchAll();
+        $customers = [];
+        foreach ($data as $key => $item) {
+            $customer = new Customer($item['name'], $item['phone'], $item['email'], $item['address']);
+            $customer->setId($item['id']);
+            array_push($customers, $customer);
+        }
+        return $customers;
+    }
+
+
 }

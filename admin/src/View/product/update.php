@@ -1,11 +1,12 @@
-<form action="" method="post"  enctype="multipart/form-data">
+<form action="" method="post"  enctype="multipart/form-data" class="form-group">
     <input type="text" name="id" value="<?php echo $product['id'] ?>" hidden>
-    <input type="file" name="my-file">
-    <input type="text" name="name" placeholder="Name" value="<?php echo $product['name'] ?>">
-    <input type="text" name="price" placeholder="Price" value="<?php echo $product['price'] ?>">
-    <input type="text" name="quantity" placeholder="Quantity" value="<?php echo $product['quantity'] ?>">
-    <input type="text" name="description" placeholder="Description" value="<?php echo $product['description'] ?>">
-    <input type="text" name="category_id" placeholder="Category" value="<?php echo $product['category_id'] ?>">
-    <input type="submit" value="Update">
+    <input type="file" name="my-file" class="form-control">
+    <input type="text" name="name" placeholder="Name" value="<?php echo $product['name'] ?>" class="form-control">
+    <input type="text" name="price" placeholder="Price" value="<?php echo $product['price'] ?>" class="form-control">
+    <input type="text" name="quantity" placeholder="Quantity" value="<?php echo $product['quantity'] ?>" class="form-control">
+    <input type="text" name="description" placeholder="Description" value="<?php echo $product['description'] ?>" class="form-control">
+    <input type="text" name="category_id" placeholder="Category" value="<?php echo $product['category_id'] ?>" class="form-control">
+    <input type="submit" value="Update" class="btn btn-primary">
 </form>
+<a href="index.php?page=list-product" class="btn btn-primary">Cancel</a>
 

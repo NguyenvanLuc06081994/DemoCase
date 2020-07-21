@@ -41,7 +41,7 @@ class CategoryManager
     {
         $sql = "SELECT * FROM categories where id =:id";
         $stmt = $this->database->prepare($sql);
-        $stmt->bindParam(':id',$id);
+        $stmt->bindParam(':id', $id);
         $stmt->execute();
         return $stmt->fetch();
     }
@@ -59,8 +59,24 @@ class CategoryManager
     public function deleteCategory($id)
     {
         $sql = "DELETE FROM `categories` WHERE id =:id";
-        $stmt= $this->database->prepare($sql);
-        $stmt->bindParam(':id',$id);
+        $stmt = $this->database->prepare($sql);
+        $stmt->bindParam(':id', $id);
         $stmt->execute();
+    }
+
+    public function searchCategory($keyword)
+    {
+        $sql = "SELECT * FROM categories WHERE name LIKE :keyword";
+        $stmt = $this->database->prepare($sql);
+        $stmt->bindValue(':keyword', '%' . $keyword . '%');
+        $stmt->execute();
+        $data = $stmt->fetchAll();
+        $categories = [];
+        foreach ($data as $item) {
+            $category = new Category($item['name'], $item['country']);
+            $category->setId($item['id']);
+            array_push($categories, $category);
+        }
+        return $categories;
     }
 }

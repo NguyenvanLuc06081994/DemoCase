@@ -4,3 +4,4 @@
     <input type="text" name="country" placeholder="Country" value="<?php echo $category['country']?>">
     <input type="submit" value="UPDATE">
 </form>
+<a href="index.php?page=list-category" class="btn btn-primary">Cancel</a>

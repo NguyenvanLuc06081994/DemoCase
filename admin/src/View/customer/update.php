@@ -6,4 +6,5 @@
     <input type="text" name="address" placeholder="Address" value="<?php echo $customer['address'] ?>">
     <input type="submit" value="UPDATE">
 </form>
+<a href="index.php?page=list-customer" class="btn btn-primary">Cancel</a>
 

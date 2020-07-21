@@ -45,7 +45,7 @@ class ProductManager
     {
         $sql = "SELECT * FROM products WHERE  id= :id";
         $stmt = $this->database->prepare($sql);
-        $stmt->bindParam('id', $id);
+        $stmt->bindParam(':id', $id);
         $stmt->execute();
         return $stmt->fetch();
     }
@@ -79,13 +79,13 @@ class ProductManager
         $stmt->bindValue(':keyword', '%' . $keyword . '%');
         $stmt->execute();
         $data = $stmt->fetchAll();
-        $arr = [];
+        $products = [];
         foreach ($data as $key => $item) {
             $product = new Product($item['img'], $item['name'], $item['price'], $item['quantity'], $item['description'],$item['category_id']);
             $product->setId($item['id']);
-            array_push($arr, $product);
+            array_push($products, $product);
         }
-        return $arr;
+        return $products;
     }
 
 

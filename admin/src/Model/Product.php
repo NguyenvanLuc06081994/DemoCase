@@ -6,13 +6,13 @@ namespace App\Model;
 
 class Product
 {
-    protected $id;
-    protected $img;
-    protected $name;
-    protected $price;
-    protected $quantity;
-    protected $description;
-    protected $category_id;
+    public $id;
+    public $img;
+    public $name;
+    public $price;
+    public $quantity;
+    public $description;
+    public $category_id;
 
     public function __construct($img, $name, $price, $quantity, $description,$category_id)
     {

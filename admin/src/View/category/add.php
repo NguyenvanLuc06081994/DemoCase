@@ -5,3 +5,4 @@
     <br>
     <input type="submit" value="ADD" class="btn btn-primary">
 </form>
+<a href="index.php?page=list-category" class="btn btn-primary">Cancel</a>

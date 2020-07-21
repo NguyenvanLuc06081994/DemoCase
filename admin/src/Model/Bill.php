@@ -14,8 +14,6 @@ class Bill
 
     public function __construct($date, $status, $totalPrice, $customer_id)
     {
-        $product = new ProductManager();
-        $detail = new DetailManager();
         $this->status = $status;
         $this->date = $date;
         $this->totalPrice = $totalPrice;

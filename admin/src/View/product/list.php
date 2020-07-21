@@ -1,4 +1,5 @@
 <div class="pt-3">
+    <a href="index.php?page=add-product" class="btn btn-primary">ADD NEW PRODUCT</a>
     <table border="1" class="table table-hover">
         <thead class="badge-dark">
         <tr>
@@ -9,7 +10,7 @@
             <th>Quantity</th>
             <th>Description</th>
             <th>Category_ID</th>
-            <th colspan="2">Action</th>
+            <th colspan="3">Action</th>
         </tr>
         </thead>
         <?php if (empty($products)): ?>
@@ -30,6 +31,8 @@
                            class="btn btn-primary">Update</a></td>
                     <td><a onclick="return confirm('Are You Sure?')" href="index.php?page=delete-product&id=<?php echo $product->getId() ?>"
                            class="btn btn-danger">Delete</a></td>
+                    <td><a href="index.php?page=list-cart&id=<?php echo $product->getId() ?>"
+                           class="btn btn-primary">ADD TO CART</a></td>
                 </tr>
             <?php endforeach; ?>
         <?php endif; ?>

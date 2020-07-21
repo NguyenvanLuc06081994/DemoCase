@@ -31,7 +31,7 @@ class CategoryController
             $country = $_POST['country'];
             $category = new Category($name, $country);
             $this->categoryController->addCategory($category);
-            header("location:index.php");
+            header("location:index.php?page=list-category");
         }
     }
 
@@ -58,6 +58,15 @@ class CategoryController
             $id = $_REQUEST['id'];
             $this->categoryController->deleteCategory($id);
             header('location:index.php?page=list-category');
+        }
+    }
+
+    public function searchCategory()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $keyword = $_REQUEST['keyword'];
+            $categories = $this->categoryController->searchCategory($keyword);
+            include('src/View/category/list.php');
         }
     }
 }

@@ -49,6 +49,9 @@
         case "delete-customer":
             $customers->deleteCustomer();
             break;
+        case 'search-customer':
+            $customers->searchCustomer();
+            break;
         case "list-bill":
             $bills->getAllBill();
             break;
@@ -56,13 +59,25 @@
             $bills->getBillDetail();
             break;
         case "login":
-            include ('src/View/login.php');
+            include('src/View/login.php');
             break;
         case 'update-category':
             $categories->updateCategory();
             break;
         case 'delete-category':
             $categories->deleteCategory();
+            break;
+        case 'search-category':
+            $categories->searchCategory();
+            break;
+        case 'logout':
+            include('src/View/logout.php');
+            break;
+        case 'list-cart':
+            $carts->addToCart();
+            break;
+        case 'form-confirm':
+            $carts->payment();
             break;
         default:
             $products->getAllProduct();

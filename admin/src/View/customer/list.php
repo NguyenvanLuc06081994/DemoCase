@@ -4,6 +4,12 @@
 
     </style>
     <a href="index.php?page=add-customer" class="btn btn-primary mt-3 mb-3">ADD NEW CUSTOMER</a>
+    <a href="index.php?page=list-customer" class="btn btn-primary">Cancel</a>
+    <form action="index.php?page=search-customer" method="post" class="form-group mt-3 mb-3">
+        <input type="text" name="keyword" placeholder="KeyWord" class="form-control">
+        <input type="submit" value="Search" class="btn btn-primary mt-3 mb-3">
+    </form>
+
     <table class="table table-hover">
 
         <tr>

@@ -9,3 +9,4 @@
     <br>
     <input type="submit" value="ADD" class="btn-primary">
 </form>
+<a href="index.php?page=list-customer" class="btn btn-primary">Cancel</a>
